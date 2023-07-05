@@ -47,9 +47,16 @@ class StationListActivity : AppCompatActivity() {
 
         val chargingStations = mutableListOf<ChargingStation>()
         // Example charging stations
-        chargingStations.add(ChargingStation("Charging Station 1", 28.7128, 77.5087125))
-        chargingStations.add(ChargingStation("Charging Station 2", 34.0522, -118.2437))
-        chargingStations.add(ChargingStation("Charging Station 3", 51.5074, -0.1278))
+
+        chargingStations.add(ChargingStation("Kengeri", 12.9081, 77.4850))
+        chargingStations.add(ChargingStation("RR Nagar", 12.9278, 77.5156))
+        chargingStations.add(ChargingStation("Srinivasapura", 13.0452,  77.8743))
+        chargingStations.add(ChargingStation("Banashankari", 12.9255, 77.5468))
+        chargingStations.add(ChargingStation("JP Nagar", 12.9077, 77.5785))
+        chargingStations.add(ChargingStation("Jayanagar", 12.9289, 77.5822))
+        chargingStations.add(ChargingStation("Koramangala", 12.9352, 77.6259))
+        chargingStations.add(ChargingStation("HSR Layout", 12.9116, 77.6389))
+
 
         return chargingStations
     }
@@ -61,7 +68,7 @@ class StationListActivity : AppCompatActivity() {
     }
 
     private fun openGoogleMaps(latitude: Double, longitude: Double) {
-        val gmmIntentUri = Uri.parse("geo:$latitude,$longitude?q=EV Charging Station near me")
+        val gmmIntentUri = Uri.parse("geo:$latitude,$longitude?q=EV Charging Station")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         mapIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

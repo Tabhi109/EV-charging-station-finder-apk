@@ -6,7 +6,7 @@ plugins {
 android {
     namespace 'com.plugmap'
     compileSdk 33
-
+    apply plugin: 'kotlin-android-extensions'
     defaultConfig {
         applicationId "com.plugmap"
         minSdk 21
